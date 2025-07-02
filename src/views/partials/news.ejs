@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Node .js News </title>
+    <title>Node.js News</title>
     <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sources+Sans+Pro&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
+     <header class="header">
        <div class="header__logo">Node.js News</div>
        <div class="header__search">Search</div>
     </header>   
 
     <div class="wrapper">
-        <div class="News">
+        <div class="news">
         <% articles.forEach(function(article, index) { %>
             <a href="#" class="news__card">
                 <h2><%- article.title.rendered%></h2>
@@ -23,6 +23,6 @@
             </a>
         <% }) %>
         </div>
-    </div>    
+    </div>          
 </body>
-</html>
+</html> 

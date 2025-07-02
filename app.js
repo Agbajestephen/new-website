@@ -13,7 +13,7 @@ app.use('/js', express.static(__dirname +'public/js'))
 app.set('views','./src/views/partials')
 app.set('view engine', 'ejs')
 
-//Routes
+//Routes 
 const newsRouter = require('./src/routes/news')
 
 app.use('/', newsRouter) 
