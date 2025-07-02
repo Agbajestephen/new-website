@@ -15,13 +15,18 @@
 
     <div class="wrapper">
         <div class="news">
+            <% if(articles != null) { %>
         <% articles.forEach(function(article, index) { %>
             <a href="#" class="news__card">
+                <img src="<%- article.thumbnail_url %>"alt="<%- article.title.rendered %>">
                 <h2><%- article.title.rendered%></h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis eius recusandae rerum natus quas expedita accusantium quidem excepturi sunt nobis, sit possimus nostrum consectetur corporis earum quasi eaque alias debitis.</p>
+                <p><%- article.excerpt.rendered %></p>
                 
             </a>
         <% }) %>
+        <% } else { %>
+            No Posts Found
+         <% } %>   
         </div>
     </div>          
 </body>
