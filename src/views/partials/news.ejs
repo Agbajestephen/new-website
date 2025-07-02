@@ -4,9 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Node .js News </title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sources+Sans+Pro&display=swap">
 </head>
 <body>
-    <h1>Node.js News</h1>
+    <header class="header">
+       <div class="header__logo">Node.js News</div>
+       <div class="header__search">Search</div>
+    </header>   
+
+    <div class="wrapper">
+        <div class="News">
+        <% articles.forEach(function(article, index) { %>
+            <a href="#" class="news__card">
+                <h2><%- article.title.rendered%></h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis eius recusandae rerum natus quas expedita accusantium quidem excepturi sunt nobis, sit possimus nostrum consectetur corporis earum quasi eaque alias debitis.</p>
+                
+            </a>
+        <% }) %>
+        </div>
+    </div>    
 </body>
 </html>
