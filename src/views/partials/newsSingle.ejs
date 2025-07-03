@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node.js News</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+</head>
+<body>
+     <header class="header">
+       <div class="header__logo">Node.js News</div>
+       <%- include('./search.ejs') %>
+    </header>   
+<!-- If you want to use the search functionality, you can add a form here
+This is the single article view, which displays the full content of a specific article.
+It checks if the article exists and renders its title and content. -->
+    <div class="wrapper">
+        <div class="news-single">
+                <a href="/">&larr;- Back</a>
+                <% if (article != null) { %>
+                    <h2><%- article.title.rendered%></h2>
+                    <p><%- article.content.rendered %></p>
+                <% } else { %>
+                    <p>No Article Found</p>
+                <% } %>
+        </div>
+    </div>          
+</body>
+</html> 
